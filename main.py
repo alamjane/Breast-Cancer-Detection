@@ -86,6 +86,6 @@ def predictedResult():
         logger.info(e)
         raise e
 
-
+ 
 if __name__ == '__main__':
     app.run(debug=True)
