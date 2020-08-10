@@ -88,3 +88,4 @@ dtype: int64
 2020-08-10 11:48:27,749 - data_processing_functions - INFO - ----------predictValues Starts----------
 2020-08-10 11:48:27,753 - data_processing_functions - INFO - (569, 30)
 2020-08-10 11:48:49,395 - data_processing_functions - INFO - ==========================Prediction Completed==========================
+2020-08-10 13:04:20,139 - single_record_prediction - INFO - could not convert string to float: 'Hemant'
