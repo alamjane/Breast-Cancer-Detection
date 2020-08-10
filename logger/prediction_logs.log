@@ -1,0 +1,90 @@
+2020-08-10 11:46:24,859 - single_record_prediction - INFO - {'Cancer Type': 'You Cancer type is Benign'}
+2020-08-10 11:47:08,913 - single_record_prediction - INFO - 'smoothness_mean'
+2020-08-10 11:48:09,361 - app - INFO - ==========================Prediction  Started==========================
+2020-08-10 11:48:09,381 - app - INFO - Breast Cancer-Data.csv
+2020-08-10 11:48:09,610 - data_processing_functions - INFO - ---Shape Before deleting unnammed column---
+2020-08-10 11:48:09,673 - data_processing_functions - INFO - (569, 33)
+2020-08-10 11:48:09,812 - data_processing_functions - INFO - ---Shape After deleting unnammed column---
+2020-08-10 11:48:09,953 - data_processing_functions - INFO - (569, 32)
+2020-08-10 11:48:10,006 - data_processing_functions - INFO - ----------matchColumnsDetailsWithSchema Starts----------
+2020-08-10 11:48:10,133 - data_processing_functions - INFO - Number or Names of columns in csv are not matching with schema.
+2020-08-10 11:48:10,224 - predict_validation_process.predict_validation - INFO - matchColumnsDetailsWithSchema Failed
+2020-08-10 11:48:27,164 - app - INFO - ==========================Prediction  Started==========================
+2020-08-10 11:48:27,178 - app - INFO - Breast Cancer-Test-Data1.csv
+2020-08-10 11:48:27,307 - data_processing_functions - INFO - ---Shape Before deleting unnammed column---
+2020-08-10 11:48:27,396 - data_processing_functions - INFO - (569, 31)
+2020-08-10 11:48:27,424 - data_processing_functions - INFO - ---Shape After deleting unnammed column---
+2020-08-10 11:48:27,473 - data_processing_functions - INFO - (569, 31)
+2020-08-10 11:48:27,478 - data_processing_functions - INFO - ----------matchColumnsDetailsWithSchema Starts----------
+2020-08-10 11:48:27,528 - data_processing_functions - INFO - Number of columns are identical with equal columns in the dataset and schema.
+2020-08-10 11:48:27,543 - data_processing_functions - INFO - ----------removeNullValues Starts----------
+2020-08-10 11:48:27,627 - data_processing_functions - INFO - (569, 31)
+2020-08-10 11:48:27,680 - data_processing_functions - INFO - Null Values Count Before :
+2020-08-10 11:48:27,726 - data_processing_functions - INFO - id                         0
+radius_mean                0
+texture_mean               0
+perimeter_mean             0
+area_mean                  0
+smoothness_mean            0
+compactness_mean           0
+concavity_mean             0
+concave points_mean        0
+symmetry_mean              0
+fractal_dimension_mean     0
+radius_se                  0
+texture_se                 0
+perimeter_se               0
+area_se                    0
+smoothness_se              0
+compactness_se             0
+concavity_se               0
+concave points_se          0
+symmetry_se                0
+fractal_dimension_se       0
+radius_worst               0
+texture_worst              0
+perimeter_worst            0
+area_worst                 0
+smoothness_worst           0
+compactness_worst          0
+concavity_worst            0
+concave points_worst       0
+symmetry_worst             0
+fractal_dimension_worst    0
+dtype: int64
+2020-08-10 11:48:27,743 - data_processing_functions - INFO - Null Values Count After :
+2020-08-10 11:48:27,748 - data_processing_functions - INFO - id                         0
+radius_mean                0
+texture_mean               0
+perimeter_mean             0
+area_mean                  0
+smoothness_mean            0
+compactness_mean           0
+concavity_mean             0
+concave points_mean        0
+symmetry_mean              0
+fractal_dimension_mean     0
+radius_se                  0
+texture_se                 0
+perimeter_se               0
+area_se                    0
+smoothness_se              0
+compactness_se             0
+concavity_se               0
+concave points_se          0
+symmetry_se                0
+fractal_dimension_se       0
+radius_worst               0
+texture_worst              0
+perimeter_worst            0
+area_worst                 0
+smoothness_worst           0
+compactness_worst          0
+concavity_worst            0
+concave points_worst       0
+symmetry_worst             0
+fractal_dimension_worst    0
+dtype: int64
+2020-08-10 11:48:27,749 - data_processing_functions - INFO - ----------predictValues Starts----------
+2020-08-10 11:48:27,753 - data_processing_functions - INFO - (569, 30)
+2020-08-10 11:48:49,395 - data_processing_functions - INFO - ==========================Prediction Completed==========================

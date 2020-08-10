@@ -17,8 +17,17 @@ import configparser
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
+# Initilization the object of ConfigParser 
+config = configparser.ConfigParser()
+config.read('./config/bcconfig.ini')
+
+prediction_logger = config['logger_files']['prediction_logger']
+training_logger = config['logger_files']['training_logger']
+best_pickle_file_path = config['models']['best_pickle_file_path']
+
+
 # Logger file for prediction
-logger = getlogger(app.name, './logger/prediction_logs.log', consoleHandlerrequired=True)
+logger = getlogger(app.name, './logger/' + prediction_logger, consoleHandlerrequired=True)
 
 
 # function to render home page in GET method and predict individual values which user enter from front end or send as api using postman/insomania in POST method
@@ -50,7 +59,7 @@ def predict_api():
 # function to predict csv file data and store result into database
 @app.route("/predict", methods=['GET', 'POST'])
 def predictValidation():
-    isfilepresent = os.path.isfile('models/final_model/best_pickle_file.pkl')
+    isfilepresent = os.path.isfile(best_pickle_file_path)
     if isfilepresent:
         if request.method == 'POST':
             f = request.files['file']
