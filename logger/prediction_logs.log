@@ -1,0 +1,83 @@
+2020-08-11 11:18:12,332 - prediction_scheduler - INFO - ================Prediction Scheduler Started================
+2020-08-11 11:18:12,512 - data_processing_functions - INFO - ---Shape Before deleting unnammed column---
+2020-08-11 11:18:12,512 - data_processing_functions - INFO - (569, 31)
+2020-08-11 11:18:12,515 - data_processing_functions - INFO - ---Shape After deleting unnammed column---
+2020-08-11 11:18:12,516 - data_processing_functions - INFO - (569, 31)
+2020-08-11 11:18:12,516 - data_processing_functions - INFO - ----------matchColumnsDetailsWithSchema Starts----------
+2020-08-11 11:18:12,530 - data_processing_functions - INFO - Number of columns are identical with equal columns in the dataset and schema.
+2020-08-11 11:18:12,532 - data_processing_functions - INFO - ----------removeNullValues Starts----------
+2020-08-11 11:18:12,534 - data_processing_functions - INFO - (569, 31)
+2020-08-11 11:18:12,534 - data_processing_functions - INFO - Null Values Count Before :
+2020-08-11 11:18:12,538 - data_processing_functions - INFO - id                         0
+radius_mean                0
+texture_mean               0
+perimeter_mean             0
+area_mean                  0
+smoothness_mean            0
+compactness_mean           0
+concavity_mean             0
+concave points_mean        0
+symmetry_mean              0
+fractal_dimension_mean     0
+radius_se                  0
+texture_se                 0
+perimeter_se               0
+area_se                    0
+smoothness_se              0
+compactness_se             0
+concavity_se               0
+concave points_se          0
+symmetry_se                0
+fractal_dimension_se       0
+radius_worst               0
+texture_worst              0
+perimeter_worst            0
+area_worst                 0
+smoothness_worst           0
+compactness_worst          0
+concavity_worst            0
+concave points_worst       0
+symmetry_worst             0
+fractal_dimension_worst    0
+dtype: int64
+2020-08-11 11:18:12,542 - data_processing_functions - INFO - Null Values Count After :
+2020-08-11 11:18:12,547 - data_processing_functions - INFO - id                         0
+radius_mean                0
+texture_mean               0
+perimeter_mean             0
+area_mean                  0
+smoothness_mean            0
+compactness_mean           0
+concavity_mean             0
+concave points_mean        0
+symmetry_mean              0
+fractal_dimension_mean     0
+radius_se                  0
+texture_se                 0
+perimeter_se               0
+area_se                    0
+smoothness_se              0
+compactness_se             0
+concavity_se               0
+concave points_se          0
+symmetry_se                0
+fractal_dimension_se       0
+radius_worst               0
+texture_worst              0
+perimeter_worst            0
+area_worst                 0
+smoothness_worst           0
+compactness_worst          0
+concavity_worst            0
+concave points_worst       0
+symmetry_worst             0
+fractal_dimension_worst    0
+dtype: int64
+2020-08-11 11:18:12,548 - data_processing_functions - INFO - ----------predictValues Starts----------
+2020-08-11 11:18:12,549 - data_processing_functions - INFO - (569, 30)
+2020-08-11 11:18:30,836 - data_processing_functions - INFO - ==========================Prediction Completed==========================
+2020-08-11 11:18:30,838 - prediction_scheduler - INFO - Prediction Successful
+2020-08-11 11:18:30,838 - prediction_scheduler - INFO - ================Prediction Scheduler Ended================
+2020-08-11 11:18:33,914 - prediction_scheduler - INFO - ================Prediction Scheduler Started================
+2020-08-11 11:18:48,485 - prediction_scheduler - INFO - Prediction Successful
+2020-08-11 11:18:48,485 - prediction_scheduler - INFO - ================Prediction Scheduler Ended================
