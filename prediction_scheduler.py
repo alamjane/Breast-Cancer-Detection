@@ -22,7 +22,7 @@ sched = BackgroundScheduler()
     we are using for train, test and predict also. 
     This is getting called using decorator and will be triggered every 8 hours, prdict the data and will store into DB.
 ''' 
-@sched.scheduled_job(trigger="interval", minutes=10)
+@sched.scheduled_job(trigger="interval", minutes=3)
 def PredictScheduler(): 
     logger.info("================Prediction Scheduler Started================")
     try:
@@ -37,4 +37,5 @@ def PredictScheduler():
         logger.info("Error in reading file.")    
     logger.info("================Prediction Scheduler Ended================")
 
+sched.configure()
 sched.start()
