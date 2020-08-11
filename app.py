@@ -13,7 +13,10 @@ from single_record_prediction import SingleRecordPrediction
 import configparser
 import time
 import atexit
-from prediction_scheduler import PredictScheduler
+# from prediction_scheduler import PredictScheduler
+
+from apscheduler.schedulers.background import BackgroundScheduler
+scheduler = BackgroundScheduler()
 
 # Flask app initialization
 app = Flask(__name__)
@@ -116,5 +119,26 @@ def downloadPredictedCsv():
        "attachment; filename=predicted_result_"+ curr_clock + ".csv"})
 
 
+def scheduledTask():
+    print("This task is running every 5 seconds")
+
+
+def PredictScheduler(): 
+    logger.info("================Prediction Scheduler Started================")
+    try:
+        df = pd.read_csv("predict_csv_uploads/Breast Cancer-Test-Data1.csv")
+        predObject = PredictValidation(df)
+        response = predObject.predict_validation()
+        if response is True:
+            logger.info("Prediction Successful")
+        else:
+            logger.info("Prediction Failed")
+    except:
+        logger.info("Error in reading file.")    
+    logger.info("================Prediction Scheduler Ended================")
+
+
 if __name__ == '__main__':
+    scheduler.add_job(id ='Scheduled task', func = PredictScheduler, trigger = 'interval', minutes=10)
+    scheduler.start()
     app.run(debug=True)
