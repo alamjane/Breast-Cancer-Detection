@@ -23,7 +23,7 @@ sched = BackgroundScheduler()
     This is getting called using decorator and will be triggered every 8 hours, prdict the data and will store into DB.
 ''' 
 @sched.scheduled_job(trigger="interval", minutes=10)
-def PredictScheduler():
+def PredictScheduler(): 
     logger.info("================Prediction Scheduler Started================")
     try:
         df = pd.read_csv("predict_csv_uploads/Breast Cancer-Test-Data1.csv")
