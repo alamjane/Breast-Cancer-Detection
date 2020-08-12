@@ -1,5 +1,5 @@
 Created by -
-	alam.jane61@gmail.com and hemantgautam50@gmail.com
+	alam.jane61@gmail.com and hemantgautam50@gmail.com 
 
 Project Description:
 	The main purpose of this project is to predict the cancer type of given data.
