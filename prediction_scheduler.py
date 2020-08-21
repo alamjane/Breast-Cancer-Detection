@@ -20,10 +20,11 @@ sched = BackgroundScheduler()
     function to run schedule job to predict continues data,
     as of now we have only one csv file, and the same file 
     we are using for train, test and predict also. 
-    This is getting called using decorator and will be triggered every 8 hours, prdict the data and will store into DB.
-''' 
-@sched.scheduled_job(trigger="interval", minutes=3)
-def PredictScheduler(): 
+    This is getting called using decorator and will be triggered 
+    every 8 hours, prdict the data and will store into DB.
+'''
+@sched.scheduled_job(trigger="interval", minutes=30)
+def PredictScheduler():
     logger.info("================Prediction Scheduler Started================")
     try:
         df = pd.read_csv("predict_csv_uploads/Breast Cancer-Test-Data1.csv")
@@ -34,8 +35,7 @@ def PredictScheduler():
         else:
             logger.info("Prediction Failed")
     except:
-        logger.info("Error in reading file.")    
+        logger.info("Error in reading file.")
     logger.info("================Prediction Scheduler Ended================")
 
-sched.configure()
 sched.start()

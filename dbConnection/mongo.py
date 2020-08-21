@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import csv
 import configparser
+import bcrypt
 
 # Initilization the object of ConfigParser 
 config = configparser.ConfigParser()
@@ -42,7 +43,7 @@ class DatabaseConnect():
     # function to store predicted results(id and cancer type) into Database
     def storePredictedResult(self, df):
         collection = self.db['predicted_result']
-        # collection.remove()
+        collection.remove()
         data_dict = df.to_dict("records")
         collection.insert_many(data_dict)
 
@@ -52,3 +53,20 @@ class DatabaseConnect():
         # collection.remove()
         cursor = collection.find({})
         return cursor
+
+    def userLogin(self, email):
+        collection = self.db['users']
+        return collection.find_one({'email' : email})
+
+    def storeDashboardDetails(self, dashboard_details):
+        collection = self.db['ml_dashboard']
+        collection.remove()
+        collection.insert(dashboard_details)
+
+    def fetchDashboardDetails(self):
+        collection = self.db['ml_dashboard']
+        cursor = collection.find()    
+        for doc in cursor:
+            pass 
+            # print(doc)
+        return doc
